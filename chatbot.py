@@ -2,7 +2,7 @@ import keyboard as kb
 import random
 
 def writeWords():
-    hotkey = input("\033[1;35;40m[+]\033[+] choose a hotkey [default: R]: ")
+    hotkey = input("\033[1;35;40m\033[+] choose a hotkey [default: R]: ")
     if hotkey:
         print(f"\033[1;31;40m[+]\033[+] all set just press '{hotkey.upper()}' when ready!")
         with open("wordlist.txt", "r") as file:
