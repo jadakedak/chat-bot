@@ -17,6 +17,14 @@ def writeWords():
                 kb.wait("r")
                 kb.write(word)
                 kb.press("Enter")
+     elif hotkey.lower() == "none":
+        with open("wordlist.txt", "r") as file:
+            for count in range(5):
+                print(f"starting in {count}..."
+                sleep(1)
+            for word in file:
+                kb.write(word)
+                kb.press("Enter")
     else:
         print(f"[+] {hotkey} is an invalid hotkey!")
 
@@ -37,7 +45,7 @@ def wordGen():
             num += 1
             word = ""
     print("[+] words added!")
-    writeWords(2, 0)
+    writeWords()
 
         
 
